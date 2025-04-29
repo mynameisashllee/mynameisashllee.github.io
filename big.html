@@ -3,40 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
   <title>big projects</title>
-  <style>
-    @font-face {
-      font-family: 'Phluff';
-      src: url('Phluff.otf') format('truetype');
-    }
-
-    body {
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f2f0ef;
-      font-family: 'Phluff', Arial, sans-serif;
-    }
-
-  </style>
 </head>
 <body>
     <a href="index.html">< back</a>
     <h1>big projects</h1>
-    <h3>interesting things i've been involved in</h3>
-    <ul>
-        <li><a href="https://pypi.org/project/unihasher/">unihasher</a></li>
-        <ul>
-            <li>unihasher is an open-source python package that compares the performance of perceptual hashes</li>
-            <li>optimises the privacy-preserving detection of similar unwated images</li>
-        </ul>
-        <li><a href="https://tedxbencoolenstyouth.com/">TEDx Bencoolen St Youth</a></li>
-        <ul>
-            <li>designed and created the website based on the theme - muse</li>
-        </ul>
-    </ul>
+    <h3>click to find out more!</h3>
+    <div class="container">
+      <div class="bracelet-stack">
+          <div class="bracelet" onclick="toggleProject(1)">
+              <img src="assets/bangle.png" alt="Project 1 Bracelet">
+          </div>
+          <div class="bracelet" onclick="toggleProject(2)">
+              <img src="assets/bangle2.png" alt="Project 2 Bracelet">
+          </div>
+          <div class="bracelet" onclick="toggleProject(3)">
+              <img src="assets/bangle3.png" alt="Project 3 Bracelet">
+          </div>
+      </div>
+      
+      <div class="project-info-container">
+        <div class="project-info" id="project-1">
+          <h3 class="project-title">
+              unihasher 
+              <a href="https://pypi.org/project/unihasher/" class="project-link">
+                  <i class="fa fa-link"></i>
+              </a>
+          </h3>
+          <ul>
+              <li>unihasher is an open-source python package that compares the performance of perceptual hashes</li>
+              <li>optimises the privacy-preserving detection of similar undesirable images</li>
+          </ul>
+        </div>
+      
+        <div class="project-info" id="project-2">
+          <h3 class="project-title">
+            tedx bencoolen st youth 
+              <a href="https://tedxbencoolenstyouth.com" class="project-link">
+                  <i class="fa fa-link"></i>
+              </a>
+          </h3>
+          <ul>
+            <li>i designed and created the website based on the event theme - muse</li>
+          </ul>
+        </div>
+      
+        <div class="project-info" id="project-3">
+          <h3 class="project-title">
+            healing cafe 
+              <a href="https://bucketfish.github.io/dflya/" class="project-link">
+                  <i class="fa fa-link"></i>
+              </a>
+          </h3>
+          <ul>
+            <li>a one-stop resource for youth's mental health for IMDA's digital for life youth awards</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -4,109 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>akshara's site!</title>
-  <style>
-    @font-face {
-      font-family: 'Phluff';
-      src: url('Phluff.otf') format('truetype');
-    }
-
-    body {
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f2f0ef;
-      font-family: 'Phluff', Arial, sans-serif;
-    }
-
-    #keychain-container {
-        display: flex;
-        align-items: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    #keychain-container img {
-      height: 250px;
-      width: auto;
-    }
-
-    #title {
-      position: relative;
-      font-size: 48px;
-      font-weight: bold;
-      color: #333;
-    }
-
-    #links-container {
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: -10px;
-      margin-top: -20px; /* Pulls charms closer to the ring */
-    }
-
-    a {
-      display: block;
-      position: relative;
-      transform-origin: center top;
-      text-align: center;
-    }
-
-    #links-container img {
-        height: 30vh;
-        width: auto;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    #links-container img:hover {
-        transform: scale(1.2);
-    }
-
-    .charm:nth-child(1) { transform: rotate(40deg) translateY(10px); }
-    .charm:nth-child(2) { transform: rotate(0deg) translateY(50px); }
-    .charm:nth-child(3) { transform: rotate(-40deg) translateY(10px); }
-
-    .label {
-      display: block;
-      font-size: 15px;
-      margin-top: 5px;
-      color: #333;
-    }
-
-    a {
-      text-decoration: none;
-      color: white;
-    }
-
-    @media (max-width: 600px) {
-        #title {
-            font-size: 24px;
-        }
-      #keychain-container img {
-        height: 150px;
-      }
-
-      #title {
-        font-size: 24px;
-      }
-
-      #links-container img {
-        height: 100px;
-      }
-        .charm:nth-child(1) { transform: rotate(30deg) translateY(10px); }
-        .charm:nth-child(2) { transform: rotate(0deg) translateY(50px); }
-        .charm:nth-child(3) { transform: rotate(-30deg) translateY(10px); }
-
-      .label {
-        font-size: 12px;
-      }
-    }
-
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="title">hi! i'm akshara.</div>
@@ -115,15 +13,15 @@
       <img src="assets/keyring.png">
     </div>
     <div id="links-container">
-      <a href="about.html" class="charm">
+      <a href="about.html" class="charm" id="about">
         <img src="assets/about-me.png">
         <span class="label">about me</span>
       </a>
-      <a href="big.html" class="charm">
+      <a href="big.html" class="charm" id="about">
         <img src="assets/big-projects.png">
         <span class="label">big projects</span>
       </a>
-      <a href="small.html" class="charm">
+      <a href="small.html" class="charm" id="about">
         <img src="assets/small-projects.png">
         <span class="label">small projects</span>
       </a>

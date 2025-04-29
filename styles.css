@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'Phluff';
+    src: url('Phluff.otf') format('truetype');
+  }
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f0ef;
+    font-family: 'Phluff', Arial, sans-serif;
+    word-wrap: normal; /* Ensure text wraps properly */
+      padding: 50px;
+      box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: purple;
+}
+
+#keychain-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+#keychain-container img {
+    height: 250px;
+    width: auto;
+}
+
+#title {
+    position: relative;
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+}
+
+#links-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: -10px;
+    margin-top: -20px;
+}
+
+#about {
+    display: block;
+    position: relative;
+    transform-origin: center top;
+    text-align: center;
+    text-decoration: none;
+}
+
+#links-container img {
+    height: 30vh;
+    width: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+#links-container img:hover {
+    transform: scale(1.2);
+}
+
+.charm:nth-child(1) { transform: rotate(40deg) translateY(10px); }
+.charm:nth-child(2) { transform: rotate(0deg) translateY(50px); }
+.charm:nth-child(3) { transform: rotate(-40deg) translateY(10px); }
+
+.label {
+    display: block;
+    font-size: 15px;
+    margin-top: 5px;
+    color: #333;
+}
+
+
+  #links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: -10px;
+    margin-top: -20px;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.bracelet-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.bracelet {
+    width: 250px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.bracelet:hover {
+    transform: scale(1.05);
+}
+
+.bracelet img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.bracelet.open {
+    transform: translateX(-150px);
+}
+
+.project-info-container {
+    width: 100%;
+    position: relative;
+    min-height: 200px;
+}
+
+.project-info {
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    display: block;
+    visibility: hidden;
+}
+
+.project-info.show {
+    display: block;
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.project-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.project-link .fa {
+    font-size: 25px;
+}
+
+  @media (max-width: 600px) {
+      #title {
+          font-size: 24px;
+      }
+    #keychain-container img {
+      height: 150px;
+    }
+
+    #title {
+      font-size: 24px;
+    }
+
+    #links-container img {
+      height: 100px;
+    }
+      .charm:nth-child(1) { transform: rotate(30deg) translateY(10px); }
+      .charm:nth-child(2) { transform: rotate(0deg) translateY(50px); }
+      .charm:nth-child(3) { transform: rotate(-30deg) translateY(10px); }
+
+    .label {
+      font-size: 12px;
+    }
+
+    body {
+        padding: 10px;
+      }
+
+      li {
+        max-width: 100%;
+      }
+
+      .bracelet {
+        width: 200px;
+    }
+    
+    .project-title {
+        flex-wrap: wrap;
+    }
+    
+    .project-link .fa {
+        font-size: 14px;
+    }
+    
+    .project-info {
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        position: relative;
+    }
+    
+    .bracelet.open {
+        transform: translateX(0);
+    }
+  }
